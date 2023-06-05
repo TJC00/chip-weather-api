@@ -1,10 +1,13 @@
+com/chipthynk/chipweatherapi/dto/HourlyUnits.class
 com/chipthynk/chipweatherapi/exceptions/WeatherDetailsFailedLoading.class
 com/chipthynk/chipweatherapi/service/WeatherAPIService.class
 com/chipthynk/chipweatherapi/dto/ChatGPTRequest.class
 com/chipthynk/chipweatherapi/exceptions/ExceptionHandleControllerAdvice.class
 com/chipthynk/chipweatherapi/dto/Message.class
+com/chipthynk/chipweatherapi/dto/CurrentWeather.class
+com/chipthynk/chipweatherapi/dto/Data.class
+com/chipthynk/chipweatherapi/dto/Hourly.class
 com/chipthynk/chipweatherapi/controller/WeatherAPIController.class
-com/chipthynk/chipweatherapi/dto/PromptData.class
 com/chipthynk/chipweatherapi/config/OpenAIConfig.class
 com/chipthynk/chipweatherapi/exceptions/WeatherSummaryExceptionHandler.class
 com/chipthynk/chipweatherapi/dto/ChatGptResponse$Choice.class

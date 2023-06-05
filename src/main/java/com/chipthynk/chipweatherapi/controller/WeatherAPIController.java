@@ -1,6 +1,6 @@
 package com.chipthynk.chipweatherapi.controller;
 
-import com.chipthynk.chipweatherapi.dto.PromptData;
+import com.chipthynk.chipweatherapi.dto.Data;
 import com.chipthynk.chipweatherapi.service.WeatherAPIService;
 import lombok.RequiredArgsConstructor;
 import org.springframework.http.HttpStatus;
@@ -19,7 +19,7 @@ public class WeatherAPIController {
         return new ResponseEntity<>(results, HttpStatus.OK);
     }
     @PostMapping
-    public ResponseEntity<String> getWeatherSummaryDetails(@RequestBody PromptData prompt){
+    public ResponseEntity<String> getWeatherSummaryDetails(@RequestBody Data prompt){
         String result = apiService.weatherDetailsSummary(prompt.toString());
         return new ResponseEntity<>(result, HttpStatus.OK);
     }
