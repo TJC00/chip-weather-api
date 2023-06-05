@@ -1,5 +1,6 @@
 package com.chipthynk.chipweatherapi.controller;
 
+import com.chipthynk.chipweatherapi.dto.ContentData;
 import com.chipthynk.chipweatherapi.dto.Data;
 import com.chipthynk.chipweatherapi.service.WeatherAPIService;
 import lombok.RequiredArgsConstructor;
@@ -10,6 +11,7 @@ import org.springframework.web.bind.annotation.*;
 @RestController
 @RequestMapping("/api/vi/weather-app")
 @RequiredArgsConstructor
+@CrossOrigin(origins = {"http://localhost:3000", "*"})
 public class WeatherAPIController {
 
     private final WeatherAPIService apiService;
@@ -19,8 +21,8 @@ public class WeatherAPIController {
         return new ResponseEntity<>(results, HttpStatus.OK);
     }
     @PostMapping
-    public ResponseEntity<String> getWeatherSummaryDetails(@RequestBody Data prompt){
-        String result = apiService.weatherDetailsSummary(prompt.toString());
+    public ResponseEntity<ContentData> getWeatherSummaryDetails(@RequestBody Data prompt){
+        ContentData result = apiService.weatherDetailsSummary(prompt.toString());
         return new ResponseEntity<>(result, HttpStatus.OK);
     }
 }

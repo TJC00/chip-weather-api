@@ -2,6 +2,7 @@ package com.chipthynk.chipweatherapi.service;
 
 import com.chipthynk.chipweatherapi.dto.ChatGPTRequest;
 import com.chipthynk.chipweatherapi.dto.ChatGptResponse;
+import com.chipthynk.chipweatherapi.dto.ContentData;
 import com.chipthynk.chipweatherapi.exceptions.WeatherDetailsFailedLoading;
 import com.chipthynk.chipweatherapi.exceptions.WeatherSummaryExceptionHandler;
 import lombok.RequiredArgsConstructor;
@@ -24,14 +25,14 @@ public class WeatherAPIService {
     @Autowired
     private RestTemplate template;
 
-    public String  weatherDetailsSummary(String prompt){
+    public ContentData  weatherDetailsSummary(String prompt){
         String userPrompt = "Hi there, can i get a summary of today's weather, use the following information to get the weather ";
         String systemPrompt = "Pretend you're a weather news presenter presenting LIVE on television. be energetic and full of charisma. Introduce yourself as TJ. Chidanika and say you are LIVE from the ChipThynk Headquarters. State the city you are providing a summary for. Then give a summary of today's weather only. Make it easy for the viewer to understand and know what to do to prepare for those weather conditions such as wear SPF if the UV is high etc. use the uv_index data provided to provide UV advice. Provide a joke regarding the weather. Assume the data came from your team at the news office and not the user.";
         String refinedPrompt = userPrompt + prompt;
         try{
             ChatGPTRequest request=new ChatGPTRequest(model, systemPrompt, refinedPrompt);
             ChatGptResponse chatGptResponse = template.postForObject(apiURL, request, ChatGptResponse.class);
-            return chatGptResponse.getChoices().get(0).getMessage().getContent();
+            return new ContentData(chatGptResponse.getChoices().get(0).getMessage().getContent());
         }catch (Exception e){
             throw new WeatherSummaryExceptionHandler("Failed to load weather details summary");
         }

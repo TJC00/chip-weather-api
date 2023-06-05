@@ -1,4 +1,4 @@
 -------------------------------------------------------------------------------
 Test set: com.chipthynk.chipweatherapi.ChipWeatherApiApplicationTests
 -------------------------------------------------------------------------------
-Tests run: 1, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 2.657 s - in com.chipthynk.chipweatherapi.ChipWeatherApiApplicationTests
+Tests run: 1, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 3.531 s - in com.chipthynk.chipweatherapi.ChipWeatherApiApplicationTests

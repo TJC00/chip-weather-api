@@ -2,6 +2,7 @@
 /home/tjchidanika/Desktop/springboot/projects/chip-weather-api/src/main/java/com/chipthynk/chipweatherapi/exceptions/ExceptionHandleControllerAdvice.java
 /home/tjchidanika/Desktop/springboot/projects/chip-weather-api/src/main/java/com/chipthynk/chipweatherapi/dto/HourlyUnits.java
 /home/tjchidanika/Desktop/springboot/projects/chip-weather-api/src/main/java/com/chipthynk/chipweatherapi/dto/Hourly.java
+/home/tjchidanika/Desktop/springboot/projects/chip-weather-api/src/main/java/com/chipthynk/chipweatherapi/dto/ContentData.java
 /home/tjchidanika/Desktop/springboot/projects/chip-weather-api/src/main/java/com/chipthynk/chipweatherapi/exceptions/WeatherSummaryExceptionHandler.java
 /home/tjchidanika/Desktop/springboot/projects/chip-weather-api/src/main/java/com/chipthynk/chipweatherapi/dto/ChatGptResponse.java
 /home/tjchidanika/Desktop/springboot/projects/chip-weather-api/src/main/java/com/chipthynk/chipweatherapi/ChipWeatherApiApplication.java
